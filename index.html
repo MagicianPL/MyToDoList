@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Animators-ToDo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="toDo">
+            <h1>TO-DO Lista<p>dla Animatorów</p></h1>
+            <div class="errors">Wpisz dane - Twoje zadanie pojawi się poniżej!</div>
+            <div class="flex-container">
+                <div class="inputs">
+                    <label for="city">Wpisz miejsce pokazu (miasto)*</label>
+                    <input type="text" id="city" name="city"/>
+                    <label for="date">Wpisz datę pokazu*</label>
+                    <input type="text" id="date" name="date" placeholder="np. 24.06.12"/>
+                    <label for="hour">Podaj godzinę pokazu*</label>
+                    <input type="text" id="hour" name="hour" placeholder="np. 18:40"/>
+                </div>
+                <div class="inputs">
+                    <label for="add-info">Dodatkowe informacje</label>
+                    <textarea id="add-info" name="add-info" placeholder="(OPCJONALNIE) Wpisz dodatkowe informacje np. ulicę, dokładny adres, dane kontaktowe klienta, zakres obowiązków"></textarea>
+                </div>
+            </div>
+            <button>WYŚLIJ</button>
+        </div>
+        <div class="tasks">
+        </div>
+        <div class="pop-up">
+            <span class="popup-error">Pola z gwiazdką są wymagane!</span>
+            <div class="flex-container">
+                <div class="row1">
+                    <label for="city">Wpisz miejsce pokazu (miasto)*</label>
+                    <input type="text" id="pop-city" name="city"/>
+                    <label for="date">Wpisz datę pokazu*</label>
+                    <input type="text" id="pop-date" name="date" placeholder="np. 24.06.12"/>
+                    <label for="hour">Podaj godzinę pokazu*</label>
+                    <input type="text" id="pop-hour" name="hour" placeholder="np. 18:40"/>
+                </div>
+                <div class="row2">
+                    <label for="add-info">Dodatkowe informacje</label>
+                    <textarea id="popup-info" name="add-info" placeholder="(OPCJONALNIE)"></textarea>
+                </div>
+            </div>
+            <button class="accept">Akceptuj</button>
+            <button class = "cancel">Anuluj</button>
+        </div>
+    </div>
+    
+</body>
+</html>
