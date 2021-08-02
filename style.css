@@ -16,17 +16,18 @@ body {
 }
 
 .toDo {
-    width: 100rem;
-    width: 100%;
+    width: 80%;
     min-height: 50rem;
     margin: 5rem auto 0 auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    background: rgb(236,4,6);
-    background: linear-gradient(90deg, rgba(236,4,6,1) 0%, rgba(250,250,231,1) 0%, rgba(221,212,179,1) 76%, rgba(223,214,181,1) 81%, rgba(210,201,168,1) 100%, rgba(164,155,124,1) 100%);
-    animation: appearing 1.5s forwards;
+    /*background: rgb(236, 4, 6);
+    background: linear-gradient(90deg, rgba(236, 4, 6, 1) 0%, rgba(250, 250, 231, 1) 0%, rgba(221, 212, 179, 1) 76%, rgba(223, 214, 181, 1) 81%, rgba(210, 201, 168, 1) 100%, rgba(164, 155, 124, 1) 100%);
+    animation: appearing 1.5s forwards;*/
+    background: rgb(236, 4, 6);
+    background: linear-gradient(90deg, rgba(236, 4, 6, 1) 0%, rgba(136, 198, 1, 1) 0%, rgba(221, 212, 179, 1) 76%, rgba(223, 214, 181, 1) 91%, rgba(210, 201, 168, 1) 100%, rgba(164, 155, 124, 1) 100%);
 }
 
 @keyframes appearing {
@@ -277,6 +278,7 @@ label:nth-of-type(3) {
     text-align: center;
     padding-top: 6px;
     display: none;
+    z-index: 2;
 }
 
 .pop-up .flex-container {
@@ -347,4 +349,112 @@ label:nth-of-type(3) {
     display: block;
     text-align: left;
     padding-left: 3rem;
+}
+
+
+@media (max-width: 480px) {
+    html {
+        font-size: 47%;
+    }
+
+    .toDo input {
+        font-size: 10px;
+    }
+
+    #add-info {
+        font-size: 10px;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .errors {
+        text-align: center;
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .toDo button {
+        width: 25rem;
+    }
+
+    .task {
+        width: 32rem;
+    }
+
+    .buttons-task {
+        width: 32rem;
+    }
+
+    .pop-up {
+        width: 90%;
+        height: initial;
+        padding-bottom: 1rem;
+        overflow-y: scroll;
+    }
+
+    .pop-up .flex-container {
+        flex-direction: column;
+    }
+
+    .row1 {
+        width: 90%;
+    }
+
+    .row2 {
+        width: 90%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 53%;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .errors {
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .toDo button {
+        width: 25rem;
+    }
+
+    .task {
+        width: 32rem;
+    }
+
+    .buttons-task {
+        width: 32rem;
+    }
+
+    .pop-up {
+        width: 90%;
+        height: initial;
+        padding-bottom: 1rem;
+        overflow-y: scroll;
+    }
+
+    .pop-up .flex-container {
+        flex-direction: column;
+    }
+
+    .row1 {
+        width: 90%;
+    }
+
+    .row2 {
+        width: 90%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pop-up {
+        width: 74rem;
+    }
 }
