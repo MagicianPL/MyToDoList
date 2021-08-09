@@ -29,18 +29,26 @@ let dateFromTask;
 let hourFromTask;
 let infoFromTask;
 
+let xyz = null; /*zmienna, do której będę przypisywał nazwę tła z tablicy i porównywał, czy nie wylosowało się takie samo. Zmienna ta będzie wyjorzystywana w funkcji setBgTask*/
+
 const backgroundsTask = [ //Moja tablica z nazwami backgroundów
     "balloons.jpg", "childrens.jpg", "pencils.jpg", "pencils2.jpg", "smoke.jpg", "kid.jpg", "bubbles.jpg", "bubbles2.jpg"
 ];
 
 const setBgTask = () => { //Fn ustawia losowe tło dla diva z zadaniem
+	let randomIndexNumber;
+	
     //Tworzę diva z tłem, którego wkładam w task
     const div = document.createElement("div");
     div.classList.add("bg-task");
     task.append(div);
 
     //Losuję tło dla tego diva
-    const randomIndexNumber = Math.floor(Math.random() * (backgroundsTask.length - 1));
+	do {
+    randomIndexNumber = Math.floor(Math.random() * (backgroundsTask.length - 1));
+	} while (randomIndexNumber === xyz);
+	
+	xyz = randomIndexNumber;
     //ustawiam tło
     div.style.backgroundImage = `url(${backgroundsTask[randomIndexNumber]})`;
 };
